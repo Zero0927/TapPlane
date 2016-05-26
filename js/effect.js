@@ -12,7 +12,7 @@ define(function(require,exports,module){
         
         
         txtUI.text ="+"+ String(score);
-        txtUI.font ="黑体";
+        txtUI.font ="Arial";
         txtUI.bold = true;
         txtUI.fontSize = 48;
         txtUI.zOrder = 100;
