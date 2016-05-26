@@ -1,0 +1,5 @@
+
+
+coolie.config({
+    base: './'
+}).use();
