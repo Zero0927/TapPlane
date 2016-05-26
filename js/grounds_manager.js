@@ -8,7 +8,7 @@ define(function(require,exports,module){
     var groundY = Laya.stage.height - Laya.loader.getRes("TappyPlane/groundDirt.png").height;
     var g1,g2;
     var time = 50;
-    var scrollSpeed = Math.floor(time * require("./game.js").game.scrollSpeed / 1000);
+    var scrollSpeed = Math.floor(time * require("./game.js").game.scrollSpeed / 1400);
         
     exports.init = function(){
         var groundType = "dirt";
