@@ -3,9 +3,9 @@ define(function(require,exports,module){
     var txtUI = new laya.ui.Label();
     var bestScore = laya.net.LocalStorage.getItem("bestScore")||"0";
     exports.init = function(x,y){
-        txtUI.text ="最佳得分:"+ bestScore + "\n当前得分:" +
+        txtUI.text ="Best Score:"+ bestScore + "\nCurrent Score:" +
                     String(require("./game.js").game.score);
-        txtUI.font ="宋体";
+        txtUI.font ="Arial";
         txtUI.bold = true;
         txtUI.fontSize = 24;
         txtUI.zOrder = 100;
@@ -19,7 +19,7 @@ define(function(require,exports,module){
                 bestScore = require("./game.js").game.score;
                 laya.net.LocalStorage.setItem("bestScore",bestScore);
             }
-            txtUI.text = "最佳得分:"+ bestScore + "\n当前得分:" +
+            txtUI.text = "Best Score:"+ bestScore + "\nCurrent Score:" +
                     String(require("./game.js").game.score);
         });
         return txtUI;      
