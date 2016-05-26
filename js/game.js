@@ -12,7 +12,7 @@ define(function(require,exports,module){
           COLLECTABLE:Math.pow(2,3)
       },
 
-      _scrollSpeed:40,
+      _scrollSpeed:80,
       get scrollSpeed() {
           return this._scrollSpeed;
       },
