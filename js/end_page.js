@@ -8,7 +8,7 @@ define(function(require,exports,module){
         var score = require("./game.js").game.score;
         var bestScore = laya.net.LocalStorage.getItem("bestScore") || "0";
         this.lab_score.text = score;
-        this.lab_bestScore.text = "最佳得分:"+ bestScore;
+        this.lab_bestScore.text = "Best Score:"+ bestScore;
         
         if (score > require("./game.js").game.level3){
             this.plane.skin = "UI/medalGold.png";
