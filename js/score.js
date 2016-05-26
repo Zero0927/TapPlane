@@ -5,7 +5,7 @@ define(function(require,exports,module){
     exports.init = function(x,y){
         txtUI.text ="Best Score:"+ bestScore + "\nCurrent Score:" +
                     String(require("./game.js").game.score);
-        txtUI.font ="宋体";
+        txtUI.font ="Arial";
         txtUI.bold = true;
         txtUI.fontSize = 24;
         txtUI.zOrder = 100;
