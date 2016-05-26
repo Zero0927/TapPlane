@@ -11,10 +11,6 @@ declare module laya.ani.bone {
     }
 }
 declare module laya.ani.bone {
-    /**
-     * ...
-     * @author ww
-     */
     class SkeletonPlayer extends laya.ani.bone.Skeleton {
         completeHandler: laya.utils.Handler;
         dataUrl: string;
@@ -40,10 +36,6 @@ declare module laya.ani.bone {
     }
 }
 declare module laya.ani.swf {
-    /**
-     * ...
-     * @author laya
-     */
     class MovieClip extends laya.display.Sprite {
         protected static _ValueList: Array<any>;
         interval: number;
@@ -109,79 +101,9 @@ declare module laya.asyn {
     }
 }
 declare module laya.display {
-    /**
-     * <p> <code>Animation</code> 类是位图动画,用于创建位图动画。</p>
-     * <p> <code>Animation</code> 类可以加载并显示一组位图图片，并组成动画进行播放。</p>
-     *
-     * @example 以下示例代码，创建了一个 <code>Text</code> 实例。
-     * <p>[EXAMPLE-AS-BEGIN]</p>
-     * <listing version="3.0">
-     * package
-     * {
-     * 	import laya.display.Animation;
-     * 	import laya.net.Loader;
-     * 	import laya.utils.Handler;
-     *
-     * 	public class Animation_Example
-     * 	{
-     * 		public function Animation_Example()
-     * 		{
-     * 			Laya.init(640, 800);//设置游戏画布宽高、渲染模式。
-     * 			Laya.stage.bgColor = "#efefef";//设置画布的背景颜色。
-     * 			Laya.loader.load("resource/ani/fighter.json", Handler.create(this, onLoadComplete), null, Loader.ATLAS);
-     * 		}
-     *
-     * 		private function onLoadComplete():void
-     * 		{
-     * 			var animation:Animation = Animation.fromUrl("resource/ani/fighter/rollSequence{0000}.png", 30);//创建一个 Animation 类的实例对象 animation 。
-     * 			animation.x = 200;//设置 animation 对象的属性 x 的值，用于控制 animation 对象的显示位置。
-     * 			animation.y = 200;//设置 animation 对象的属性 x 的值，用于控制 animation 对象的显示位置。
-     * 			animation.interval = 30;//设置 animation 对象的动画播放间隔时间，单位：毫秒。
-     * 			animation.play();//播放动画。
-     * 			Laya.stage.addChild(animation);//将 animation 对象添加到显示列表。
-     * 		}
-     * 	}
-     * }
-     * </listing>
-     * <listing version="3.0">
-     * Animation_Example();
-     * function Animation_Example(){
-     *     Laya.init(640, 800);//设置游戏画布宽高、渲染模式。
-     *     Laya.stage.bgColor = "#efefef";//设置画布的背景颜色。
-     *     Laya.loader.load("resource/ani/fighter.json", laya.utils.Handler.create(this, onLoadComplete), null, laya.net.Loader.ATLAS);
-     * }
-     * function onLoadComplete()
-     * {
-     *     var animation = laya.display.Animation.fromUrl("resource/ani/fighter/rollSequence{0000}.png", 30);//创建一个 Animation 类的实例对象 animation 。
-     *     animation.x = 200;//设置 animation 对象的属性 x 的值，用于控制 animation 对象的显示位置。
-     *     animation.y = 200;//设置 animation 对象的属性 x 的值，用于控制 animation 对象的显示位置。
-     *     animation.interval = 30;//设置 animation 对象的动画播放间隔时间，单位：毫秒。
-     *     animation.play();//播放动画。
-     *     Laya.stage.addChild(animation);//将 animation 对象添加到显示列表。
-     * }
-     * </listing>
-     * <listing version="3.0">
-     * import Loader = laya.net.Loader;
-     * import Handler = laya.utils.Handler;
-     *  class Animation_Example {
-     *     constructor() {
-     *         Laya.init(640, 800);//设置游戏画布宽高、渲染模式。
-     *         Laya.stage.bgColor = "#efefef";//设置画布的背景颜色。
-     *         Laya.loader.load("resource/ani/fighter.json", Handler.create(this, this.onLoadComplete), null, Loader.ATLAS);
-     *     }
-     *
-     *     private onLoadComplete(): void {
-     *         var animation: Animation = Animation.fromUrl("resource/ani/fighter/rollSequence{0000}.png", 30);//创建一个 Animation 类的实例对象 animation 。
-     *         animation.x = 200;//设置 animation 对象的属性 x 的值，用于控制 animation 对象的显示位置。
-     *         animation.y = 200;//设置 animation 对象的属性 x 的值，用于控制 animation 对象的显示位置。
-     *         animation.interval = 30;//设置 animation 对象的动画播放间隔时间，单位：毫秒。
-     *         animation.play();//播放动画。
-     *         Laya.stage.addChild(animation);//将 animation 对象添加到显示列表。
-     *     }
-     * }
-     * </listing>
-     *
-     */
+
+  
+
     class Animation extends Sprite {
         frames: Array<any>;
         /**播放间隔(单位：毫秒)*/
